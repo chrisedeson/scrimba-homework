@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", serif;
+    text-align: center;
+    
+}
+
+header {
+    background-color:#6943FF;
+    padding: 10px 30px;
+}
+
+header h1 {
+    color: white;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 38px;
+    letter-spacing: -0.03em;
+    /* text-align: center; */
+}
+
+input[type="text"] {
+    width: 117px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    border: 2px solid #B295FF;
+    font-size: 58px;
+    font-weight: 800;
+    text-align: center;
+    color: white;
+    background-color:#6943FF;
+    outline: none;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 4px 30px;
+    font-family: "Inter";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #3D3D3D;
+    margin-bottom: 20px;
+}
+
+main {
+    background: #F4F4F4;
+    padding: 20px;
+}
+
+.measurement {
+    width: 100%;
+    height: 108px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: white;
+
+}
+
+.measurement h3 {
+    color: #5A537B;
+}
+
+.measurement p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 12px;
+}
