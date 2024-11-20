@@ -1,0 +1,22 @@
+{
+    "name": "Calculator",
+    "short_name": "Calculator",
+    "author": "Christopher-Edeson",
+    "description": "A simple basic calculating app.",
+    "icons": [
+        {
+          "src": "images/favicon/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        },
+        {
+          "src": "images/favicon/android-chrome-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ],
+    "theme_color": "#FF8C00",
+    "background_color": "#FF8C00",
+    "display": "standalone",
+    "orientation": "portrait"
+}

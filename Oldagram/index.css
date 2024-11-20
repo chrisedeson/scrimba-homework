@@ -1,0 +1,71 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    max-width: 375px;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+header, .user-post-info {
+    display: flex;
+    align-items: center;
+}
+
+header {
+    justify-content: space-between;
+    padding: 5px 15px;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.logo {
+    width: 130px;
+    height: 60px;
+}
+
+.user-profile-img, .friend-dp {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;   
+}
+
+.friend-dp {
+    padding: 10px 7px 10px 10px;
+}
+
+.friend-name {
+    font-weight: 700;
+    margin: 0;
+    font-size: 13px;
+}
+
+.friend-city {
+    margin: 0;
+    margin-top: -2px;
+    font-size: 12px;
+}
+
+section img {
+    width: 100%; 
+}
+
+.icons img {
+    width: 26px;
+    height: 28px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-left: 8px;
+}
+
+.total-likes {
+    font-weight: 700;
+    margin: 0;
+}
+
+.comment {
+    margin-top: 9px;
+    margin-bottom: 20px;
+}
+
+.total-likes, .comment {
+    font-size: 13px;
+    margin-left: 12px;
+}

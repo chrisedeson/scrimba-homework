@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main {
+    max-width: 500px;
+    background-color: black;
+    padding-bottom: 20px;
+
+}
+
+input[type=text] {
+    width: 100%;
+    max-width: 500px;
+    height: 32vh;
+    font-size: 60px;
+    text-align: right;
+    padding-top: 20vh;
+    padding-right: 25px;
+    border: none;
+    color: white;
+    background-color: black;
+
+}
+
+.larger-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* gap: 15px; */
+    gap: 5vw;
+    padding: 10px;
+}
+
+.last-row {
+    display: grid;
+    grid-template-columns: 2.4fr 1fr 1fr;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#clear, #plus-minus, #percent {
+    background-color: darkgrey;
+    color: black;
+}
+
+#addition, #minus, #division, #multiplication, #equals-btn {
+    background-color: darkorange;
+    color: white;
+}
+
+#number-one, #number-two, #number-three, #number-four, #number-five, #number-six,
+#number-seven, #number-eight, #number-nine, #zero-btn, #decimal 
+{
+    background-color: rgba(66, 59, 59, 0.6);
+    color: white;
+}
+
+#zero-btn {
+    border-radius: 100px;
+    /* width: 165px; */
+    width: 46vw;
+    max-width: 200px;
+}

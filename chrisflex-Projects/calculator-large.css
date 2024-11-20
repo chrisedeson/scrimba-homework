@@ -1,0 +1,31 @@
+@media (min-width: 600px) {
+    #decimal {
+        margin-left: -15px;
+    }
+
+    button {
+        width: 80px;
+        height: 80px;
+    }
+
+    input[type=text] {
+        height: 10px;
+        /* padding-top: 30px; */
+        padding-bottom: 40px;
+
+    }
+
+    .larger-area {
+        gap: 15px;
+        margin: -12px;
+        padding-left: 20px;
+    }
+
+    body {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    
+}
+
