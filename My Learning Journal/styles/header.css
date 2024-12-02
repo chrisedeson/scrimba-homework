@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 1em; */
+    align-items: center;
+    padding: 1.42em;
+    /* grid-template-columns: 0 / repeat(5, 1fr); */
+    /* grid-template-areas: ".... head .... .... navi"; */
+
+}
+
+.header-title {
+    align-self: center;
+    font-family: "Roboto", sans-serif;
+    font-size: .84rem;
+    color: #0E0E0E;
+    /* font-weight: 700; */
+}
+
+header img {
+    align-self: center;
+    width: 24px;
+    height: 24px;
+}
+
+header .banner {
+    display: flex;
+    gap: 3px;
+    text-decoration: none;
+    /* grid-area: head; */
+}
+
+nav {
+    display: flex;
+    gap: 1.5em;
+    justify-self: end;
+    /* grid-area: navi; */
+}
+
+nav li {
+    padding-top: 2px;
+    font-size: .75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    list-style-type: none;
+    /* cursor: pointer; */
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+@media (min-width: 660px) {
+    header {
+        padding-left: 4em;
+    }
+
+    header img {
+        min-width: 34px;
+        min-height: 34px;
+    }
+
+    .header-title {
+        font-size: 1.25rem;
+    }
+
+    nav li {
+        font-size: 1rem;
+    }
+
+    nav a:hover {
+        color: tomato;
+        text-decoration: underline;
+        transition: .5s;
+    }
+
+}

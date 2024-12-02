@@ -1,0 +1,17 @@
+footer {
+    padding: 2.3em 0;
+    background-color: #202020;
+    text-align: center;
+}
+
+footer h5 {
+    color: #ECECEC;
+}
+
+footer p {
+    color: #D7D7D7;
+}
+
+footer h5, footer p {
+    font-size: 0.75rem;
+}

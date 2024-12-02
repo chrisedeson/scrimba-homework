@@ -1,0 +1,140 @@
+main {
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+}
+
+.hero-text {
+    padding-top: 1.4em;
+}
+
+.hero-section .hero-date {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.hero-text .hero-intro {
+    font-size: 1rem;
+}
+
+.hero-text .hero-intro {
+    font-size: 1rem;
+    padding-bottom: 2.178em;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+    /* max-width: 90%; */
+    padding-top: .5em;
+    padding-bottom: .32em;
+}
+
+.hero-img {
+    width: 100%;
+    padding-bottom: .5em;
+}
+
+/* MAIN-SECTION */
+
+section h4 {
+    padding-top: 2.5em;
+}
+
+.main-section h4 {
+    padding-top: 1em;
+}
+
+.main-section p {
+    padding-top: 1em;
+}
+
+/* RECENT BLOGS SECTION */
+.recent-blogs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
+    padding-bottom: 2.125em;
+}
+
+section h4 {
+    text-align: center;
+}
+
+.recent-blogs .img-container {
+    width: 100%;
+    height: 61%;
+    padding-top: 1em;
+}
+
+.recent-blogs img {
+    width: 100%;
+    height: 100%;
+}
+
+.recent-blogs .blog-date {
+    padding-top: .6em;
+    padding-bottom: .2em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.recent-blogs .blog-text {
+    padding-top: .2em;
+    color: #505050;
+}
+
+.recent-blogs a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* MEDIA QUARIES */
+@media (min-width: 660px) {
+    main {
+        padding-left: 3.3126em;
+        padding-right: 3.3126em;
+    }
+
+    .hero-text {
+        padding-top: 4.6em;
+    }
+
+    .hero-date, .hero-intro {
+        padding-left: 4.25em;
+        padding-right: 6.5em;
+    }
+
+    .hero-section .hero-date {
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    .hero-text h2 {
+        font-size: 2.26rem;
+        padding: 1em 3.3em .65em 1.89em;
+    }
+
+    .main-section p {
+        font-size: 1.15rem;
+        padding-left: 3.75em;
+        padding-right: 3.5em;
+    }
+
+    .main-section h4 {
+        font-size: 1.5rem;
+        padding-left: 2.84em;
+    }
+
+    section h4 {
+        font-size: 1.5rem;
+        padding-bottom: .3em;
+    }
+
+    section {
+        padding-bottom: 1em;
+    }
+
+    
+
+}
