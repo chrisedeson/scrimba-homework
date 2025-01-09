@@ -1,0 +1,36 @@
+.title, .sub-heading {
+  font-family: "Permanent Marker", serif;
+}
+
+.title {
+  font-size: 2.75rem;
+}
+
+.sub-heading p {
+  margin: -5px 10px 16px 0;
+  font-size: 1.25rem;
+  text-align: right;
+  color: #5E5D5D;
+}
+
+.badge-block {
+  display: flex;
+  gap: 16px;
+}
+
+button {
+  font-family: "Inter", serif;
+  padding: 3px 12px;
+  font-size: .875rem;
+  font-weight: 500;
+  border: none;
+}
+
+.button-square button {
+  border-radius: 4px;
+}
+
+.button-pill button {
+  border-radius: 12px;
+  margin-top: 17px;
+}
