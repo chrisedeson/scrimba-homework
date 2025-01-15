@@ -1,0 +1,36 @@
+.title, .subHeading {
+  font-family: "Permanent Marker", serif;
+}
+
+.title {
+  font-size: 2.75rem;
+}
+
+.subHeading p {
+  margin: -5px 10px 16px 0;
+  font-size: 1.25rem;
+  text-align: right;
+  color: #5E5D5D;
+}
+
+.badgeBlock {
+  display: flex;
+  gap: 16px;
+}
+
+button {
+  font-family: "Inter", serif;
+  padding: 3px 12px;
+  font-size: .875rem;
+  font-weight: 500;
+  border: none;
+}
+
+.buttonSquare button {
+  border-radius: 4px;
+}
+
+.buttonPill button {
+  border-radius: 12px;
+  margin-top: 17px;
+}

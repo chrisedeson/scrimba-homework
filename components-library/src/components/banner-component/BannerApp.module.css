@@ -1,0 +1,49 @@
+h1.BannerHeader1, h2.status, h2.BannerHeader2 {
+  font-family: "Permanent Marker", serif;
+}
+
+h1.BannerHeader1 {
+  font-size: 2.75rem;
+  margin: 0;
+  padding-left: 20px;
+}
+
+h2.BannerHeader2, h2.status {
+  font-size: 1.6rem;
+  color: #5E5D5D;
+  text-align: center;
+}
+
+.bannerContainer {
+  display: grid;
+  grid-template-columns: minmax(10px, 110px) 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.banner {
+  display: flex;
+  gap: 12px;
+  font-family: "Inter", serif;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.icon {
+  padding-top: 11px;
+  padding-left: 18px;
+  font-size: 16px;
+}
+
+.title, .message {
+  font-size: .75rem;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.message {
+  margin-top: 10px;
+}
