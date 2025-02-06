@@ -1,13 +1,21 @@
 body {
     margin: 0;
     font-family: "Smythe", serif;
+    background-image: url('images/background-image.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .menu {
-    margin-left: 27px;
-    margin-right: 27px
+    margin: 0 27px 27px 27px;
+    padding-bottom: 20px;
 }
 
+main {
+    background-color: white;
+
+}
 header img {
     width: 100%;
 }
@@ -178,10 +186,11 @@ header img {
 @media (min-width: 768px) {
     body, .payment-dialog {
         margin: auto;
-        max-width: 380px; 
+        max-width: 380px;
     }
 
     .payment-dialog {
         height: 270px;
     }
 }
+  
