@@ -1,19 +1,28 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+# Restaurant Ordering App
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+Welcome to the **Restaurant Ordering App** project! This application allows users to browse a restaurant's menu, place orders, and manage their selections. It's a solo project completed as part of the **Scrimba Frontend Developer Path**, showcasing my skills in **HTML**, **CSS** and **JavaScript**.
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+> Check out the [live site here →](https://restaurant-ordering-menu.netlify.app/)
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+![image](https://github.com/chrisedeson/scrimba-homework/blob/main/movie_watchlist/images/movie-watchlist.jpg?raw=true)
 
-Happy Coding!
+
+---
+
+## Features
+
+- **Menu Display**: View a categorized list of menu items with detailed descriptions and high-quality images.
+- **Order Management**: Add items to your cart, modify quantities, and remove items as needed.
+- **Real-Time Updates**: Receive immediate feedback on your cart's contents and total price.
+- **User-Friendly Interface**: An intuitive design for a seamless user experience.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+
+---
+
+## Technologies Used
+
+- **HTML**: Used for the structure of the page.
+- **CSS**: Used for styling and creating a responsive design.
+- **JavaScript**: Used for the functionality of managing orders and handling user interactions.
+
+---
