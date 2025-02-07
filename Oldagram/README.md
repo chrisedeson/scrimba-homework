@@ -1,19 +1,33 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+# Oldagram
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+Welcome to **Oldagram**, a solo project where I replicated a vintage-style Instagram clone, so to speak. This project was completed as part of the **Scrimba Frontend Developer Path**, focusing on **HTML**, **CSS**, and **JavaScript**.
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Frontend Developer Career Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+> Check out the [live site here →](https://chris-oldagram.netlify.app/)
 
-- [Our courses](https://scrimba.com/allcourses)
-- [The Frontend Career Path](https://scrimba.com/learn/frontend)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+![image](https://github.com/chrisedeson/scrimba-homework/blob/main/Restaurant-Ordering-App/screenshot.jpg?raw=true)
 
-Happy Coding!
+---
+
+## Features
+
+- **User Profiles**: Display user avatars, names, and locations.
+- **Posts**: Showcase images with captions and like counts.
+- **Interactive Elements**: Hover effects on icons and dynamic like counts.
+- **Responsive Design**: Optimized for both desktop and mobile devices.
+
+---
+
+## How to Use
+
+1. Open the project in your browser.
+2. Double-Click on the like icon to increase the like count.
+
+---
+
+## Technologies Used
+
+- **HTML**: Used for the structure of the page.
+- **CSS**: Used for styling and creating a responsive design.
+- **JavaScript**: Used for adding interactivity, such as increasing like counts.
+
+---

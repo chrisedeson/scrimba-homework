@@ -6,7 +6,6 @@ Welcome to the **Restaurant Ordering App** project! This application allows user
 
 ![image](https://github.com/chrisedeson/scrimba-homework/blob/main/Restaurant-Ordering-App/screenshot.jpg?raw=true)
 
-
 ---
 
 ## Features
