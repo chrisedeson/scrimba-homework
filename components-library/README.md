@@ -1,8 +1,25 @@
-# React + Vite
+# Components Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A comprehensive collection of reusable React components designed to streamline frontend development.  
+> Check out the [live site here →](https://chris-components-library.netlify.app/)
 
-Currently, two official plugins are available:
+![Components Library++](screenshot.jpg)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project showcases a curated set of React components, each crafted to be flexible, reusable, and easy to integrate into various projects. The library emphasizes design consistency and adaptability, providing developers with a solid foundation for building user interfaces.
+
+## Features
+
+- **Badge Component**: Display status indicators with customizable colors and text.  
+
+- **Banner Component**: Attention-grabbing banners with customizable content.
+
+- **Card Component**: Present information in a structured card layout with support for images, titles, and descriptions.
+
+- **Testimonial Component**: Showcase customer or client feedback in a carousel format.
+
+
+## Technologies Used
+
+- **React**
+
+- **Vite**
