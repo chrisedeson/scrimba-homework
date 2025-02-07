@@ -1,35 +1,38 @@
-const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
-    "Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j",
-    "k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", 
-    "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")",
-    "_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?","/"];
+const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~`!@#$%^&*()_-+=[]{},|:;<>.?/".split("");
 
-let firstPasswordObject = document.getElementById("first-password")
-let secondPasswordObject = document.getElementById("second-password")
-let generateButton = document.getElementById("generate-button")
+let firstPasswordObject = document.getElementById("first-password");
+let secondPasswordObject = document.getElementById("second-password");
+let generateButton = document.getElementById("generate-button");
 
-generateButton.addEventListener("click", function() {
-    function generatePassword() {
-        let generatedPassword = ""
-        for (let i=0; i < 15; i++) {
-            let randomIndex = Math.floor(Math.random() * characters.length)
-            let randomCharacters = characters[randomIndex];
-            generatedPassword += randomCharacters
-        }
-        return generatedPassword
+// Function to generate a random password
+function generatePassword() {
+    let generatedPassword = "";
+    for (let i = 0; i < 15; i++) {
+        let randomIndex = Math.floor(Math.random() * characters.length);
+        generatedPassword += characters[randomIndex];
     }
-    firstPasswordObject.textContent = generatePassword()
-    secondPasswordObject.textContent = generatePassword()  
-})
+    return generatedPassword;
+}
+
+generateButton.addEventListener("click", function () {
+    firstPasswordObject.textContent = generatePassword();
+    secondPasswordObject.textContent = generatePassword();
+});
+
+// Function to copy text to clipboard and show a confirmation message
+function copyToClipboard(event) {
+    const password = event.target.textContent;
+    if (password) {
+        navigator.clipboard.writeText(password).then(() => {
+            let originalText = event.target.textContent;
+            event.target.textContent = "Copied!";
+            setTimeout(() => {
+                event.target.textContent = originalText;
+            }, 1000);
+        }).catch(err => console.error("Error copying text: ", err));
+    }
+}
 
 
-
-// CHILDISH WAY, PROFESSIONAL is the one above
-// There's a way he did the button clicked
-// go to HTML and use onclick="function name()"
-// now to JS, just do:
-// function functionname() {
-// whatever you wanna do here e.g console.log("button clicked")
-// }
-
-
+firstPasswordObject.addEventListener("click", copyToClipboard);
+secondPasswordObject.addEventListener("click", copyToClipboard);
