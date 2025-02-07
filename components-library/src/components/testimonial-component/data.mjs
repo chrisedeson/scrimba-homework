@@ -19,5 +19,3 @@ const data = [
 ]
 
 export default data
-
-https://chris-components-library.netlify.app/andersons-crop.png
