@@ -47,3 +47,10 @@ Here is a list of the projects available in this repository:
 Each project is unique and showcases different aspects of frontend development, such as interactivity, UI/UX design, and handling APIs.
 
 ---
+
+## Credits
+This repository is part of my personal development journey as I progress through the Scrimba Frontend Developer Path and other resources. It showcases my growth as a frontend developer.
+
+[Scrimba](https://scrimba.com) has been a key platform in helping me develop and improve my frontend skills through interactive learning and practical projects.
+
+
