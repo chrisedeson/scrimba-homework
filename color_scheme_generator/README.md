@@ -4,7 +4,7 @@ Welcome to the **Color Scheme Generator** project! This tool allows users to cre
 
 > Check out the [live site here →](https://chris-color-scheme-generator.netlify.app/)
 
-![image](https://github.com/chrisedeson/scrimba-homework/blob/main/color_scheme_generator/images/color_scheme_generator.jpg?raw=true)
+![image]([https://github.com/chrisedeson/scrimba-homework/blob/main/color_scheme_generator/images/color_scheme_generator.jpg?raw=true](https://github.com/chrisedeson/scrimba-homework/blob/main/color_scheme_generator/Screenshot.jpg?raw=true))
 
 
 ## Features
