@@ -4,7 +4,7 @@ Welcome to the **Restaurant Ordering App** project! This application allows user
 
 > Check out the [live site here →](https://restaurant-ordering-menu.netlify.app/)
 
-![image](https://github.com/chrisedeson/scrimba-homework/blob/main/movie_watchlist/images/movie-watchlist.jpg?raw=true)
+![image](https://github.com/chrisedeson/scrimba-homework/blob/main/Restaurant-Ordering-App/screenshot.jpg?raw=true)
 
 
 ---
