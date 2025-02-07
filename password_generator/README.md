@@ -4,7 +4,7 @@ This is a simple yet powerful tool that generates secure, random passwords based
 
 > Check out the [live site here →](https://chris-password-generator.netlify.app/)
 
-![image](https://github.com/chrisedeson/scrimba-homework/blob/main/movie_watchlist/images/movie-watchlist.jpg?raw=true)
+![image](https://github.com/chrisedeson/scrimba-homework/blob/main/password_generator/screenshot.jpg?raw=true)
 
 ---
 
