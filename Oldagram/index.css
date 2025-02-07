@@ -1,9 +1,14 @@
 html, body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     max-width: 375px;
     font-family: "Source Sans 3", sans-serif;
+    background-image: url('images/background.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
+
 
 header, .user-post-info {
     display: flex;
@@ -14,6 +19,10 @@ header {
     justify-content: space-between;
     padding: 5px 15px;
     border-bottom: 1px solid #C6C6C6;
+}
+
+header, main {
+    background-color: white;
 }
 
 .logo {
