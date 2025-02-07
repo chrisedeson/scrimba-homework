@@ -4,7 +4,7 @@ Welcome to **Oldagram**, a solo project where I replicated a vintage-style Insta
 
 > Check out the [live site here →](https://chris-oldagram.netlify.app/)
 
-![image](https://github.com/chrisedeson/scrimba-homework/blob/main/Restaurant-Ordering-App/screenshot.jpg?raw=true)
+![image](https://github.com/chrisedeson/scrimba-homework/blob/main/Oldagram/images/screenshot.jpg?raw=true)
 
 ---
 
