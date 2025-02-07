@@ -56,7 +56,7 @@ export default function Login() {
                     type="email"
                     placeholder="Email address"
                     value={loginFormData.email}
-                    title="type - 'me@chrisflex.com' as the email"
+                    title="me@chrisflex.com"
                 />
                 <input
                     name="password"
@@ -64,7 +64,7 @@ export default function Login() {
                     type="password"
                     placeholder="Password"
                     value={loginFormData.password}
-                    title="type - 'christopher' as the password"
+                    title="christopher"
                 />
                 <button
                     disabled={status === "submitting"}
