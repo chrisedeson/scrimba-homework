@@ -11,8 +11,8 @@ This project contains a personal learning journal that allows me to track my pro
 
 ## Features
 
-- **Track Progress**: Record milestones, projects, or topics learned.
-- **Search Functionality**: Quickly find your entries based on tags or keywords.
+- **Blogs**: Able to read milestones, projects, or topics learned.
+
 - **Responsive Design**: Optimized for use across devices (desktop, tablet, mobile).
 
 ---
