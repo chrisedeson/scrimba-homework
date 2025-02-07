@@ -3,7 +3,7 @@
 > A comprehensive collection of reusable React components designed to streamline frontend development.  
 > Check out the [live site here →](https://chris-components-library.netlify.app/)
 
-![Components Library++](screenshot.jpg)
+![Components Library++](https://github.com/chrisedeson/scrimba-homework/blob/main/components-library/public/screenshot.jpg?raw=true)
 
 This project showcases a curated set of React components, each crafted to be flexible, reusable, and easy to integrate into various projects. The library emphasizes design consistency and adaptability, providing developers with a solid foundation for building user interfaces.
 
