@@ -13,7 +13,7 @@ function loadWatchlist() {
 
     // Fetch movie details for each movie ID in the watchlist
     watchlistArray.forEach(movieID => {
-        fetch(`http://www.omdbapi.com/?&apikey=fd385fee&i=${movieID}`)
+        fetch(`https://www.omdbapi.com/?&apikey=fd385fee&i=${movieID}`)
             .then(response => response.json())
             .then(movieDetails => {
                 renderWatchlistMovie(movieDetails);

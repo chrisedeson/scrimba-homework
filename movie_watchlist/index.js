@@ -3,8 +3,9 @@ const searchInputEl = document.getElementById("search-input");
 
 document.getElementById("search-btn").addEventListener("click", (event) => {
     event.preventDefault();
+    const apiKey = import.meta.env.VITE_OMDB_API_KEY; // Vite-style env variable for Netlify
     const searchInput = searchInputEl.value;
-    const api = `http://www.omdbapi.com/?&apikey=fd385fee&s=${searchInput}`;
+    const api = `https://www.omdbapi.com/?&apikey=${apiKey}&s=${searchInput}`;
 
     // Save the search input to localStorage
     localStorage.setItem("lastSearch", searchInput);
@@ -23,7 +24,7 @@ function fetchAPIResult(api) {
 
                 // Fetch detailed data for each movie
                 for (const movie of data.Search) {
-                    fetch(`http://www.omdbapi.com/?&apikey=fd385fee&i=${movie.imdbID}`)
+                    fetch(`https://www.omdbapi.com/?&apikey=fd385fee&i=${movie.imdbID}`)
                         .then(response => response.json())
                         .then((movieDetails) => {
                             renderMovies(movieDetails);
@@ -135,7 +136,7 @@ window.addEventListener("load", () => {
         searchInputEl.value = lastSearch; // Restore the search input
         MovieListEl.innerHTML = ''; // Clear any existing content
         lastSearchResults.forEach(movie => {
-            fetch(`http://www.omdbapi.com/?&apikey=fd385fee&i=${movie.imdbID}`)
+            fetch(`https://www.omdbapi.com/?&apikey=fd385fee&i=${movie.imdbID}`)
                 .then(response => response.json())
                 .then((movieDetails) => {
                     renderMovies(movieDetails);
