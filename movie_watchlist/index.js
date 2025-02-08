@@ -1,13 +1,16 @@
 const MovieListEl = document.getElementById("movie-list");
 const searchInputEl = document.getElementById("search-input");
+const apiKey = "fd385fee"; // Vite-style env variable for Netlify
 
 document.getElementById("search-btn").addEventListener("click", (event) => {
     event.preventDefault();
-    const apiKey = import.meta.env.VITE_OMDB_API_KEY; // Vite-style env variable for Netlify
-    const searchInput = searchInputEl.value;
-    const api = `https://www.omdbapi.com/?&apikey=${apiKey}&s=${searchInput}`;
-
-    // Save the search input to localStorage
+    const searchInput = searchInputEl.value.trim();
+    if (!searchInput) {
+        alert("Please enter a movie name");
+        return;
+    }
+    
+    const api = `https://www.omdbapi.com/?apikey=${apiKey}&s=${searchInput}`;
     localStorage.setItem("lastSearch", searchInput);
     fetchAPIResult(api);
 });
@@ -17,19 +20,9 @@ function fetchAPIResult(api) {
         .then(response => response.json())
         .then(data => {
             if (data.Response === "True") {
-                MovieListEl.innerHTML = ''; // Clear the movie list before rendering
-
-                // Save the fetched movie list to localStorage
+                MovieListEl.innerHTML = ''; 
                 localStorage.setItem("lastSearchResults", JSON.stringify(data.Search));
-
-                // Fetch detailed data for each movie
-                for (const movie of data.Search) {
-                    fetch(`https://www.omdbapi.com/?&apikey=fd385fee&i=${movie.imdbID}`)
-                        .then(response => response.json())
-                        .then((movieDetails) => {
-                            renderMovies(movieDetails);
-                        });
-                }
+                data.Search.forEach(movie => fetchMovieDetails(movie.imdbID));
             } else {
                 MovieListEl.innerHTML = `
                     <div class="movie-unavailable">
@@ -37,16 +30,20 @@ function fetchAPIResult(api) {
                     </div>
                 `;
             }
-        });
+        })
+        .catch(error => console.error("Error fetching movie list:", error));
+}
+
+function fetchMovieDetails(imdbID) {
+    fetch(`https://www.omdbapi.com/?apikey=${apiKey}&i=${imdbID}`)
+        .then(response => response.json())
+        .then(renderMovies)
+        .catch(error => console.error("Error fetching movie details:", error));
 }
 
 function renderMovies(data) {
     const poster = data.Poster !== "N/A" ? data.Poster : "images/default-poster.webp";
-
-    // Retrieve the watchlist from local storage
     const watchlistArray = JSON.parse(localStorage.getItem("movieID")) || [];
-
-    // Check if the movie is already in the watchlist
     const isInWatchlist = watchlistArray.includes(data.imdbID);
 
     MovieListEl.innerHTML += `
@@ -57,16 +54,12 @@ function renderMovies(data) {
             <div class="movie-details">
                 <div class="movie-title">
                     <h2>${data.Title}</h2>
-                    <p>
-                        <span class="star">&starf;</span> ${data.imdbRating}
-                    </p>
+                    <p><span class="star">&starf;</span> ${data.imdbRating}</p>
                 </div>
                 <div class="genre">
                     <p>${data.Runtime}</p>
                     <p>${data.Genre}</p>
-                    <button 
-                        data-watchlist="${data.imdbID}" 
-                        aria-label="Add to Watchlist"
+                    <button data-watchlist="${data.imdbID}" aria-label="Add to Watchlist"
                         ${isInWatchlist ? "disabled" : ""}>
                         ${isInWatchlist ? "Added!" : "<span class='watchlist-btn-flicker'>+</span>Watchlist"}
                     </button>
@@ -82,75 +75,42 @@ function renderMovies(data) {
 }
 
 function applyReadMoreFunctionality() {
-    const readMoreBtns = document.querySelectorAll(".read-more");
-
-    readMoreBtns.forEach((btn) => {
+    document.querySelectorAll(".read-more").forEach((btn) => {
         const plotText = btn.previousElementSibling;
-
-        // Check if the text is truncated
-        function checkIfTruncated() {
-            const isTruncated = plotText.scrollHeight > plotText.clientHeight;
-            btn.classList.toggle("invisible", !isTruncated);
-        }
-
-        // Add click event for "Read more/Read less"
+        const isTruncated = plotText.scrollHeight > plotText.clientHeight;
+        btn.classList.toggle("invisible", !isTruncated);
         btn.addEventListener("click", (event) => {
             event.preventDefault();
             plotText.classList.toggle("truncate");
-            btn.textContent = plotText.classList.contains("truncate")
-                ? "Read more"
-                : "Read less";
+            btn.textContent = plotText.classList.contains("truncate") ? "Read more" : "Read less";
         });
-
-        // Initial check
-        checkIfTruncated();
-        window.addEventListener("resize", checkIfTruncated);
     });
 }
 
 document.addEventListener("click", function(event) {
     if (event.target.dataset.watchlist) {
-        // Retrieve existing watchlist from local storage or initialize as an empty array
         let watchlistArray = JSON.parse(localStorage.getItem("movieID")) || [];
-        
-        // Add the clicked movie ID to the array if it doesn't already exist
         if (!watchlistArray.includes(event.target.dataset.watchlist)) {
             watchlistArray.push(event.target.dataset.watchlist);
         }
-
-        // Save the updated array back to local storage
         localStorage.setItem("movieID", JSON.stringify(watchlistArray));
-
-        // Update button feedback
         event.target.textContent = "Added!";
         event.target.disabled = true;
     }
 });
 
-// Restore the previous state when the page loads
 window.addEventListener("load", () => {
     const lastSearch = localStorage.getItem("lastSearch");
     const lastSearchResults = JSON.parse(localStorage.getItem("lastSearchResults"));
-
     if (lastSearch && lastSearchResults) {
-        searchInputEl.value = lastSearch; // Restore the search input
-        MovieListEl.innerHTML = ''; // Clear any existing content
-        lastSearchResults.forEach(movie => {
-            fetch(`https://www.omdbapi.com/?&apikey=fd385fee&i=${movie.imdbID}`)
-                .then(response => response.json())
-                .then((movieDetails) => {
-                    renderMovies(movieDetails);
-                });
-        });
+        searchInputEl.value = lastSearch;
+        MovieListEl.innerHTML = ''; 
+        lastSearchResults.forEach(movie => fetchMovieDetails(movie.imdbID));
     }
 });
 
-// Function to clear search results from localStorage
 function clearSearchResults() {
     localStorage.removeItem("lastSearch");
     localStorage.removeItem("lastSearchResults");
 }
-
-// Set a timer to clear search results every 5 minutes
-setInterval(clearSearchResults, 300000); // 300000ms = 5 minutes
-
+setInterval(clearSearchResults, 300000);
