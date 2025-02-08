@@ -3,7 +3,7 @@
 # Assembly Endgame
 
 
-![image](https://github.com/chrisedeson/scrimba-homework/blob/main/movie_watchlist/images/movie-watchlist.jpg?raw=true)
+![image](https://github.com/chrisedeson/scrimba-homework/blob/main/assembly-endgame/screenshot.jpg?raw=true)
 
 ---
 
