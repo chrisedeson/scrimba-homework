@@ -3,7 +3,7 @@
 > An interactive web application for renting decked-out travel vans for your next road trip adventure.  
 > Check out the [live site here →](https://scrim-van-life.netlify.app/)
 
-![VanLife](screenshot.jpg)
+![VanLife](https://github.com/chrisedeson/scrimba-homework/blob/main/van-life/assets/images/van-life.jpg?raw=true)
 
 ---
 
