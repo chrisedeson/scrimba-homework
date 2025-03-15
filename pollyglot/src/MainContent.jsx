@@ -25,7 +25,7 @@ export default function MainContent() {
         setResponse(null); // Reset previous response
     
         try {
-            const response = await fetch("https://fastapi-app-501427434491.us-central1.run.app", {
+            const response = await fetch("https://fastapi-app-501427434491.us-central1.run.app/translate", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ 
