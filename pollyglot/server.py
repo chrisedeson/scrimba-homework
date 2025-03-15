@@ -10,6 +10,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://pollyglot-translate.netlify.app", "https://fastapi-app-501427434491.us-central1.run.app"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
