@@ -1,0 +1,190 @@
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  max-width: 700px;
+}
+
+/* Header */
+header {
+  background-image: url("./assets/worldmap.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #191930;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 50px 10px;
+}
+
+.heading-img {
+  height: 85px;
+  width: 95px;
+}
+
+.title {
+  font-family: "Big Shoulders Stencil", sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  color: #32CD32;
+  margin-bottom: 0;
+}
+
+.title-description {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: white;
+  margin-top: 0;
+}
+
+/* Main Content */
+main {
+  margin: 30px 13px;
+  padding: 25px 20px 48px;
+  border: 4px solid #252F42;
+  border-radius: 15px;
+  position: relative;
+}
+
+main .subheading {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #035A9D;
+}
+
+main textarea {
+  box-sizing: border-box;
+  max-height: 30vh;
+  width: 100%;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 8px;
+  color: #333333;
+  background-color: #EFF0F4;
+  border: none;
+  resize: none;
+}
+
+textarea::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Styling the scrollbar thumb (the draggable part) */
+textarea::-webkit-scrollbar-thumb {
+  background-color: #c7c7c7;
+  border-radius: 10px;  
+}
+
+/* Styling the scrollbar thumb when hovering */
+textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #b9b9b9;
+}
+
+.languages {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+label, input[type="radio"] {
+  cursor: pointer;
+}
+
+.language-icon {
+  width: 20px;
+}
+
+.translate-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 44px auto 0;
+  width: 100%;
+  max-width: 500px;
+  padding: 10px 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  background-color: #035A9D;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Spinner animation */
+.spinner {
+  border: 4px solid transparent;
+  border-top: 4px solid white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Dim background overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Translation result */
+.translation-text {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #222;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.footer-link {
+  color: #4da8da;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
