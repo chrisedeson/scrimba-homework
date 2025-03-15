@@ -23,13 +23,14 @@ export default function MainContent() {
         setLoading(true);
         setError(null);  // Reset error state
         setResponse(null); // Reset previous response
+    
         try {
-            const response = await fetch("https://fastapi-app-501427434491.us-central1.run.app/translate", {
+            const response = await fetch("https://pollyglot-translate.netlify.app/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ 
                     text: text, 
-                    target_language: selectedLanguage.slice(0, 2).toLowerCase() // Convert to language code
+                    target_language: selectedLanguage // ✅ Send full language name
                 })
             });
     
@@ -43,6 +44,8 @@ export default function MainContent() {
         }
         setLoading(false);
     };
+    
+    
 
     const handleTranslateClick = () => {
         if (text.trim() === "") {
