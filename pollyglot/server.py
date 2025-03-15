@@ -9,7 +9,7 @@ app = FastAPI()
 # Enable CORS for React frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://pollyglot-translate.netlify.app/"],  # Update this in production
+    allow_origins=["https://pollyglot-translate.netlify.app", "https://fastapi-app-501427434491.us-central1.run.app"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
