@@ -62,6 +62,8 @@
 ---
 
 ## Project Structure
+
+```
 PollyGlot/
 ├── public/               # Public assets for the React app (favicons, manifest, etc.)
 ├── src/                  # Main source code for the React frontend
@@ -82,7 +84,7 @@ PollyGlot/
 ├── requirements.txt      # Python dependencies for FastAPI backend
 ├── server.py             # FastAPI backend server
 └── vite.config.js        # Vite configuration for React project
-
+```
 
 ---
 
