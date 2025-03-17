@@ -43,6 +43,7 @@ Here is a list of the projects available in this repository:
 - **Password Generator**
 - **Unit Converter**
 - **Van Life**
+- **PollyGrot**
 
 Each project is unique and showcases different aspects of frontend development, such as interactivity, UI/UX design, and handling APIs.
 
